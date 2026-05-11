@@ -22,10 +22,6 @@ const HeroSection = () => {
           21 dias com oração, presença e estratégia de gatilhos — para você parar de ser governado pela vontade de fumar.
         </p>
 
-        <a href="#pricing" className="btn-cta text-lg mb-6">
-          QUERO COMEÇAR MEUS 21 DIAS AGORA
-        </a>
-
         <p className="font-display text-cream-gold text-lg md:text-xl lg:text-2xl font-bold mt-8 mb-4 leading-snug">
           Mas antes de começar, leia o que vem abaixo.
         </p>
