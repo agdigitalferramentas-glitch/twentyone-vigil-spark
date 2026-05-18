@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Mail, MessageCircle, Clock, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
