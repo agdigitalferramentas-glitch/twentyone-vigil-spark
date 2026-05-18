@@ -3,6 +3,27 @@ import { Mail, MessageCircle, Clock, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Obrigado = () => {
+  useEffect(() => {
+    const pixelScript = document.createElement("script");
+    pixelScript.src = "https://iwrrijemxtudyakmhajk.supabase.co/functions/v1/tracking-pixel?pid=455078f8-5fc2-4eed-aa98-35b4d8948b3e&track=all";
+    pixelScript.async = true;
+    document.body.appendChild(pixelScript);
+
+    const trackScript = document.createElement("script");
+    trackScript.textContent = `
+      window.AGMetrics?.track("thank_you_page", {
+        page: window.location.pathname,
+        referrer: document.referrer
+      });
+    `;
+    document.body.appendChild(trackScript);
+
+    return () => {
+      document.body.removeChild(pixelScript);
+      document.body.removeChild(trackScript);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero - Acima da dobra */}
